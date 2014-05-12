@@ -1,0 +1,3 @@
+2013-11-18 11:52:17,865 INFO  Stopvm :> Entering Stopvm method
+2013-11-18 11:52:17,876 INFO  ShutdownAllRunningVirtualMachines :> ShutdownAllRunningVirtualMachines Started
+2013-11-18 11:52:27,764 INFO  ShutdownAllRunningVirtualMachines :> ShutdownAllRunningVirtualMachines Succesfully

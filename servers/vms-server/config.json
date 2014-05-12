@@ -1,0 +1,12 @@
+{
+  "VMs":[
+    {
+      "ID":"VM-WIN7-64",
+      "OS":"Windows 7",
+      "FLAVOUR":"VM-IE8-001-preq"
+    }
+  ],
+  "Paths":{
+    "VM-WIN7-64":"C:\\VirtualMachines\\Win7_X64_VM-001\\Win7_X64_VM-001.vmx"
+  }
+}

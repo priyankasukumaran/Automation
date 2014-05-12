@@ -1,0 +1,12 @@
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\SheduleVmps.config
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\SheduleVmps.exe
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\SheduleVmps.pdb
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\Vestris.VMWareLib.dll
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\Interop.VixCOM.dll
+D:\SheduleVmps\SheduleVmps\SheduleVmps\obj\x86\Debug\SheduleVmps.exe
+D:\SheduleVmps\SheduleVmps\SheduleVmps\obj\x86\Debug\SheduleVmps.pdb
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\SheduleVmps.exe.config
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\log4net.dll
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\log4net.xml
+D:\SheduleVmps\SheduleVmps\SheduleVmps\bin\Debug\Newtonsoft.Json.dll
+D:\SheduleVmps\SheduleVmps\SheduleVmps\obj\x86\Debug\SheduleVmps.csprojResolveAssemblyReference.cache

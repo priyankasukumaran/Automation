@@ -1,0 +1,55 @@
+#trayList {
+    width: 160px;
+}
+
+#bleedList {
+    width: 100px;
+}
+
+#sizeList {
+    width: 100px;
+}
+
+label {
+    width: 140px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+#printCtrls div {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+#printCtrls select {
+    width: 258px;
+    height: 30px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+#printCtrls input {
+    width: 250px;
+    height: 25px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+label {
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+th {
+    background-color: #BDBDBD;
+    font-family: Verdana;
+    font-size: 15px;
+}

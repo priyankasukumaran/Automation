@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vestris.VMWareComTools</name>
+    </assembly>
+    <members>
+        <member name="T:Vestris.VMWareComLib.Tools.GuestOS">
+            <summary>
+            Default implementation of the <see cref="T:Vestris.VMWareComLib.Tools.IGuestOS"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.Tools.IGuestOS">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.Tools.GuestOS"/>.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.GuestOS.ReadFile(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents as a string.</returns>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.GuestOS.ReadFile(System.String,System.Text.Encoding)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <param name="encoding">Encoding applied to the file contents.</param>
+            <returns>File contents as a string.</returns>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.GuestOS.ReadFileBytes(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents as bytes.</returns>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.GuestOS.ReadFileLines(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents, line-by-line.</returns>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.GuestOS.ReadFileLines(System.String,System.Text.Encoding)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <param name="encoding">Encoding applied to the file contents.</param>
+            <returns>File contents, line-by-line.</returns>
+        </member>
+        <member name="P:Vestris.VMWareComLib.Tools.GuestOS.IpAddress">
+            <summary>
+            Remote IP address.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.Tools.IShellOutput">
+            <summary>
+            Standard shell output.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.Tools.Windows.IShell">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.Tools.Windows.Shell"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.Tools.ShellOutput">
+            <summary>
+            Default implementation of the <see cref="T:Vestris.VMWareComLib.Tools.IShellOutput"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.Tools.Windows.Shell">
+            <summary>
+            Default implementation of the <see cref="T:Vestris.VMWareComLib.Tools.Windows.IShell"/> COM interface.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareComLib.Tools.Windows.Shell.RunCommandInGuest(System.String)">
+            <summary>
+            Use RunProgramInGuest to execute cmd.exe /C "guestCommandLine" > file and parse the result.
+            </summary>
+            <param name="guestCommandLine">Guest command line, argument passed to cmd.exe.</param>
+            <returns>Standard output.</returns>
+        </member>
+    </members>
+</doc>

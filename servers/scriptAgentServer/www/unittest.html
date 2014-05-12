@@ -1,0 +1,148 @@
+<table border="0" width="980px">
+  <br>
+  <h3 id="welcome" align="right"></h3>
+  <tr>
+    <td style="height:30px;color:Black">
+      <h3>
+        Run Unit Test Jobs
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="errLabel" class="errText">
+      </div>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="inputForm" style="background:#F2F9FA">
+        <table border="0" cellspacing="2" cellpadding="2">
+          <tr>
+            <td width="200px">
+              Operating Systems
+            </td>
+            <td colspan="2">
+              <select id="os" class="longcombo">
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Browser
+            </td>
+            <td colspan="2">
+              <select id="browser" class="longcombo" multiple>
+                <option value="FF">
+                  Firefox
+                </option>
+                <option value="GC">
+                  Google Chrome
+                </option>
+                <option value="IE">
+                  Internet Explorer
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Server
+            </td>
+            <td colspan="2">
+              <select id="server" class="longcombo">
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Tests
+            </td>
+            <td>
+              <select id="jobSel" class="longcombo">
+              </select>
+            </td>
+            <td>
+              <img src="./images/refresh.png" id="updateTests" value="Refresh" hegiht="20px" width="20px"/>
+            </td>
+            <td>
+              <div id="spinner1"><img src="./images/spinner.gif" hegiht="20px" width="20px"/>Loading...</div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="text-align:right;">
+              <a id="cust" style="font-size:x-small" ><img src="/images/edit.png" align="top" width="16" alt="Edit" /><b>Parameters</b></a>
+              <a id="cancel" style="font-size:x-small">Hide</a>
+            </td>
+            <td></td>
+            <td>
+              
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div id="testparams" style="background:#F2F9FA" ">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <input type="text" placeholder="Custom param key 1" id="key1" class="shorttext"/>
+                      <input type="text" placeholder="Custom param value 1" id="value1" class="shorttext"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" placeholder="Custom param key 2" id="key2" class="shorttext"/>
+                      <input type="text" placeholder="Custom param value 2" id="value2" class="shorttext"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" placeholder="Custom param key 3" id="key3" class="shorttext"/>
+                      <input type="text" placeholder="Custom param value 3" id="value3" class="shorttext"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" placeholder="Custom param key 4" id="key4" class="shorttext"/>
+                      <input type="text" placeholder="Custom param value 4" id="value4" class="shorttext"/>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input class="button" type="button" id="edit" value="Run Unit Test"/>
+            </td>
+			      <td id="vmipdiv"></td>
+          </tr>
+          <tr>
+            <td style="height:3px" colspan="2"></td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <div id="spinner" style="padding-left: 120px; ">
+        <img src="./images/spinner.gif" /> In Progress......
+      </div>
+      <div id="testResult" style="padding-left: 120px; ">
+        <div id="reportDiv">
+        </div>
+      </div>
+   </td>
+  </tr>
+</table>
+

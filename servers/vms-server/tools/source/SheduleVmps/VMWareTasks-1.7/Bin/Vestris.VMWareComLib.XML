@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vestris.VMWareComLib</name>
+    </assembly>
+    <members>
+        <member name="T:Vestris.VMWareComLib.IVMWareRootSnapshotCollection">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareRootSnapshotCollection"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareSharedFolder">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareSharedFolder"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareSharedFolderCollection">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareSharedFolderCollection"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareSnapshot">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareSnapshot"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareSnapshotCollection">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareSnapshotCollection"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareVirtualHost">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareVirtualHost"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.IVMWareVirtualMachine">
+            <summary>
+            A COM interface to <see cref="T:Vestris.VMWareLib.VMWareVirtualMachine"/>.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareRootSnapshotCollection">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareRootSnapshotCollection"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareSharedFolder">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareSharedFolder"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareSharedFolderCollection">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareSharedFolderCollection"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareSnapshot">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareSnapshot"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareSnapshotCollection">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareSnapshotCollection"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareVirtualHost">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareVirtualHost"/> COM interface.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareComLib.VMWareVirtualMachine">
+            <summary>
+            The default implementation of the <see cref="T:Vestris.VMWareComLib.IVMWareVirtualMachine"/> COM interface.
+            </summary>
+        </member>
+    </members>
+</doc>

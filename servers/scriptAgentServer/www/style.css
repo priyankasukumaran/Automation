@@ -1,0 +1,78 @@
+body {
+  position:absolute;
+  left:0px;
+  background-color: #383838;
+  margin: 0; padding: 0;
+  font-size: small;
+  color: #383838;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+* html body {
+	font-size: x-small; /* for IE5/Win */
+	f\ont-size: small; /* for other IE versions */
+	}
+
+
+/* Conatiner */
+#container {
+	background-color: #fff;
+	width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+	}
+
+/* Header */
+#container h1 {
+	width: 277px;
+	height: 10px;
+	margin: 10px 0 0 18px;
+	text-indent: -9999em;
+	float: left;
+	}
+/* arun */
+#buttons {
+	margin: 10px 27px 0;
+	font-family:Trebuchet MS;
+	}
+.button {
+	width:120px;
+	font-family:Trebuchet MS;
+	}
+/* arun */
+
+/* Footer */
+#footer {
+	width: 822px;
+	color: #fff;
+	font-size: 85%;
+	margin: 20px auto;
+	}
+
+#footer a:link, #footer a:hover, #footer a:active, #footer a:visited {
+	color: #fff;
+	text-decoration: none;
+	}
+
+#copyright {
+	float: left;
+	}
+
+#nav_footer {
+	float: right;
+	list-style: none;
+	}
+
+#nav_footer li {
+	float: left;
+	}
+span.tab{
+    padding: 0 65px; /* Or desired space*/
+}	
+
+#project, #server {
+	width: 180px;
+	height: 30px;
+	font-size: 13px;font-weight:bold;
+}

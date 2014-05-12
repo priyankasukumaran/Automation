@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Automated Unit Test </title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			
+			$('#runBtn').click(function() {
+				$('#runBtn').attr("disabled", "disabled");
+				
+				var url ="/runTest?browser=" + $('#browser').val() + "&testServer=" + $('#testServer').val() 
+							+ "&destip=" + $('#destip').val() + "&test=" + $('#testList').val() + "&email=" + $('#email').val() + "&subemail=" + $('#subemail').val();
+				
+				$('#testResult').html('<img src="./images/spinner.gif" /> Running the test...');
+				$('#testResult').show();
+				$.ajax({
+				  url: url,
+				  cache: false
+				}).done(function( html ) {
+					$("#testResult").html(html);
+					$('#runBtn').removeAttr("disabled");
+				}).fail(function() {
+					$("#testResult").html("Failed to run the test");
+					$('#runBtn').removeAttr("disabled");
+				});
+			});
+		});
+	</script>
+	<style type="text/css" media=screen>
+		#trayList {width: 160px; }
+		#bleedList {width: 100px; }
+		#sizeList {width: 100px; }
+		label {width: 140px; display: inline-block;}
+		h1 {font-size: 18px;}
+		#printCtrls div {padding: 5px; padding-left: 15px;}
+		#printCtrls select {width: 258px; height: 30px; font-size: 14px; padding: 2px;}
+		#printCtrls input {width: 250px; height: 25px; font-size: 14px; padding: 2px;}
+	</style>
+</head>
+<body>
+<h1 style="padding: 10px;">Run Panini Unit Test</h1>
+<div id="printCtrls" style="padding-left: 50px;">
+<div style="padding: 5px; padding-left: 0px;"><b>Step 1:</b></div>
+	<div>
+	<label>Run Web Driver:</label>
+		<a href="/getWebDriver"><b>Download</b></a>, unzip and run <b>'start-server.bat'</b> in Windows machine or <b>'start-server-mac.sh'</b> in MAC machine..
+	</div>
+	<div style="padding-left: 0px; font-size:14px; "><b>Step 2:</b></div>
+	<div>
+	<label>Browser:</label>
+	<select id="browser">
+		<option value="FF">Firefox</option>
+		<option value="GC">Chrome</option>
+		<option value="IE">IE</option>
+		<option value="Safari">Safari</option>
+	</select>
+	</div>
+	<div>
+		<label>Test URL:</label>
+		<input type="text" id="testServer" value="http://integration.twosmiles.com" />
+	</div>
+	<div>
+		<label>Client Machine IP:</label>
+		<input type="text" id="destip" value="" /> <em>[Machine in which web driver is running. Leave blank to run in the same machine.]</em>
+	</div>
+	<div>
+		<label>Test case:</label>
+		<select id="testList">
+			<option value="panini-basic-flow">panini-basic-flow</option>
+			<option value="panini-main-flow">panini-pdf-flow</option>
+			<option value="panini-silk-flow">panini-silk-flow</option>
+			<option value="art-pagination-test">art-pagination-test</option>
+		</select>
+	</div>
+	<div>
+		<label>Your Email:</label>
+		<input type="text" id="email" value="loki.project2013@gmail.com" />
+	</div>
+	<div style="display: none;">
+		<label>Subscription Emails:</label>
+		<input type="text" id="subemail"/>(Put ',' between two mail ids)
+	</div>
+
+	<div style="padding: 20px; padding-left: 110px;">
+	<input id="runBtn" type="button" value="Run Test" />
+	</div>
+</div>
+<br/>
+<div id="testResult" style="padding-left: 120px; display: none; ">
+<img src="./images/spinner.gif" /> Running the test...
+</div>
+</body>
+</html>

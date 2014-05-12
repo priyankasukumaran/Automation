@@ -1,0 +1,259 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../images/Ubuntu-R.ttf);
+}
+* { padding:0; margin:0; outline:0; }
+body {
+	background:#E2E2E2;
+	font-family:  Ubuntu;
+	font-size:13px;
+	line-height:17px;
+	color:#5d5d5d;
+	padding-bottom:10px;
+}
+input, textarea, select { font-family: Ubuntu; font-size:11px; }
+input[type=text], input[type=password] {
+	height:22px;font-size:15px;
+}
+
+a img { border:0; }
+
+a { color:#0095aa; text-decoration: underline; cursor:pointer; }
+a:hover { color:#5d5d5d; text-decoration: none; }
+
+.left, .alignleft { float:left; display:inline; }
+.right, .alignright { float:right; display:inline; }
+
+.cl { font-size:0; line-height:0; clear:both; display:block; height:0; }
+
+.al { text-align: left; }
+.ar { text-align: right; }
+.ac { text-align: center; }
+
+h2 { font-size:40px; line-height:36px; text-transform: uppercase; }
+h2 strong{ color:#8a1212; }
+h3 { font-size:17px; line-height:19px; color:#2b2b2b; }
+h4 { font-size:12px; line-height:17px;}
+
+h1#logo {width:60px;line-height:0; height:60px; float:left; color:#fff;}
+h1#appName {width:350px;line-height:3; height:60px; float:left; color:#fff;}
+
+.shell { width:1000px; margin:0 auto; }
+.label { width:1000px; margin:0 auto; text-align:right; color:#fff}
+
+#top { height:60px; background:url(../images/main.gif);}
+.background {background:url(../images/top.gif);}
+
+#navigation { float:right; white-space:nowrap;}
+#navigation ul{ list-style-type: none; line-height:14px; padding-top:20px; float:left; }
+#navigation ul li{ float:left; display:inline; border-right:solid 1px #757171; padding-right:8px; margin-right:8px; }
+#navigation ul li.last{ margin-right:0; border:0; padding-right:0; }
+#navigation ul li a{ color:#fff; text-decoration: none;}
+#navigation ul li a:hover,
+#navigation ul li a.active { color:#00e0ff; }
+
+
+#footer { height:30px; background:url(../images/footer.gif); white-space:nowrap; line-height:29px; color:#686868; }
+#footer .left span{ color:#c8c7c7; padding:0 3px;}
+#footer a{ color:#686868; text-decoration: none;}
+#footer a:hover{ color:#0095aa; }
+
+.cols {}
+.col { float:left; display:inline; width:270px; margin-right:80px;}
+.col-right { float:right; display:inline; width:270px;}
+
+h3.tab { height:46px; background:url(../images/tab1.gif) no-repeat 0 0; width:202px; padding:0 10px; line-height:46px; margin-bottom:15px;}
+
+.ico { display:block; padding:0 0 0 30px; background-repeat:no-repeat; background-position:0 center; }
+.ico1 { background-image:url(../images/ico1.gif)}
+.ico2 { background-image:url(../images/ico2.gif)}
+.ico3 { background-image:url(../images/ico3.gif)}
+
+.button {height:25px;width:60px}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.menu
+{
+    padding:  15px 0px 4px 8px;
+    float:right;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: Gray;
+    border-right: 1px #4e667d solid;
+    color: #fff;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+.tablestyle {
+    border-collapse: collapse;
+}
+
+.tdstyle{
+    border: 1px solid black;
+		text-align:left;
+}
+
+.rstyle{
+    border: 1px solid black;
+		text-align:center;
+}
+
+.thstyle{
+    border: 1px solid black;
+		background:#0196AC;
+		color:#fff;
+		text-align:left;
+}
+
+.button {
+	display: block;
+	float: left;
+	font-family:Ubuntu;
+	font-size: 13px ; /* Change 13px as desired */
+	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+	height: 24px; /* Height of button background height */
+	text-decoration: none;
+	width:120px;
+}
+
+.longtext {
+	font-size: 13px;
+	width:410px;
+}
+
+.longcombo {
+	font-size: 13px;
+	width:415px;
+}
+.shorttext {
+	font-size: 13px;
+	width:200px;
+}
+#gitTag {
+	width:410px;
+}
+
+.gridHeader {
+	background:#0196AC;
+}
+
+.gridRow {
+	background:#CBEDEF;
+}
+
+.gridToper {
+	background:#D6CADE;
+}
+
+.gridVal {
+	background:#F5F2F7;
+}
+
+
+.errText {
+	white-space:normal;
+	overflow:hidden;
+	color:red;
+	font-weight:bold;
+	height:auto;
+}
+
+.reportInfo {
+  border: 1px solid #b1b1b1;
+  min-height:200px;
+}
+.reportInfo label {
+  font-weight: bold; padding:0 5px 0 5px;display:block;
+}
+.reportInfo h2 {
+  font-size:14px; text-transform:none;
+}
+.reportInfo > div {
+  padding: 5px;
+}
+.reportInfo > div > div {
+  overflow-y:scroll;
+  max-height:400px;
+  padding-left:10px;
+}
+.reportInfo h3 {
+  font-size: 12px; font-weight:bold;display:block; padding-left:10px;
+  padding-top:10px;
+}
+.reportInfo .pass{
+  color: green;font-weight:bold;
+}
+.reportInfo .fail{
+  color: red;font-weight:bold;
+}
+.reportInfo .time{
+  color: green;display:block;text-align:right;padding-right:10px;
+}
+
+#vmpstbl #name {width:410px;}
+
+.logout{
+  color:#fff;
+}
+
+a.logout:hover
+{
+  color:#00e0ff;
+}
+
+
+.curved-border {
+  border:1px solid #686868;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+}
+
+.curved-border-bottom {
+  border:1px solid #686868;
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+}
+
+
+.sumTable{
+    border-collapse: collapse;
+}
+
+
+.sumTr{
+    height:30px;
+    border: 1px solid #D6CADE;
+}
+
+
+

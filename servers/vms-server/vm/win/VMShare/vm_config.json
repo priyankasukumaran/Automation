@@ -1,0 +1,22 @@
+{
+  "VMServer":"VM Server 1",
+  "VMs":[
+    {
+      "ID":"VM-WIN7-64",
+      "OS":"Windows 7",
+      "FLAVOUR":"VM-IE9"
+    }
+  ],
+  "VMInfo":{
+	"VM-WIN7-64":{
+		"path":"D:\\VM_Win7Sp1_64_Loki\\VM_Win7Sp1_64_Loki.vmx",
+		"user":"testuser",
+		"password":"test",
+        "type": "VM"
+	}
+  },
+  "ScriptServer":{
+	"hostname":"15.80.127.193",
+	"port":"9080"
+  }
+}

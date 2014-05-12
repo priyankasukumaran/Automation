@@ -1,0 +1,541 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vestris.VMWareLib.MSBuildTasks</name>
+    </assembly>
+    <members>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineOpen">
+            <summary>
+            Open a virtual machine.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect">
+            <summary>
+            Connect to a virtual machine host.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.GetConnectedHost">
+            <summary>
+            Connected virtual machine host.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.ConnectionType">
+            <summary>
+            Connected host type.
+            See <see cref="T:Vestris.VMWareLib.VMWareVirtualHost.ServiceProviderType"/> for possible values.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.ConnectTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.Host">
+            <summary>
+            Host name.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.HostUsername">
+            <summary>
+            Host username.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualHostConnect.HostPassword">
+            <summary>
+            Host password.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineOpen.OpenVirtualMachine(Vestris.VMWareLib.VMWareVirtualHost)">
+            <summary>
+            Opened virtual machine.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineOpen.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineOpen.Filename">
+            <summary>
+            Virtual machine file.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineOpen.OpenVMTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest.WaitForVMwareUserProcessInGuest(Vestris.VMWareLib.VMWareVirtualMachine)">
+            <summary>
+            Waits for vmware user process in the guest
+            </summary>
+            <param name="virtualMachine"></param>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest.GuestUsername">
+            <summary>
+            Guest operating system username.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest.GuestPassword">
+            <summary>
+            Guest operating system password.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineWaitForVMwareUserProcessInGuest.WaitForVMwareUserProcessTimeout">
+            <summary>
+            Timeout to wait for the vmware user process.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromGuestToHost">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn.PowerOnVirtualMachine(Vestris.VMWareLib.VMWareVirtualMachine)">
+            <summary>
+            
+            </summary>
+            <param name="virtualMachine"></param>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn.PowerOnTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn.WaitForTools">
+            <summary>
+            Wait for the virtual machine to boot to a ready state.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOn.WaitForToolsTimeout">
+            <summary>
+            Timeout to wait for the virtual machine to boot.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.LoginGuest(Vestris.VMWareLib.VMWareVirtualMachine)">
+            <summary>
+            
+            </summary>
+            <param name="virtualMachine"></param>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.LoginTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.GuestUsername">
+            <summary>
+            Guest operating system username.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.GuestPassword">
+            <summary>
+            Guest operating system password.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineLoginGuest.Interactive">
+            <summary>
+            Perform an interactive login.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromGuestToHost.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromGuestToHost.CopyFileTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromGuestToHost.HostPathName">
+            <summary>
+            Destination path on the host operating system.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromGuestToHost.GuestPathName">
+            <summary>
+            Source path on the guest operating system.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromHostToGuest">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromHostToGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromHostToGuest.CopyFileTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromHostToGuest.HostPathName">
+            <summary>
+            Source path on the host operating system.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCopyFileFromHostToGuest.GuestPathName">
+            <summary>
+            Destination path on the guest operating system.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateDirectoryInGuest">
+            <summary>
+            Create a directory in the guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateDirectoryInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateDirectoryInGuest.CreateDirectoryTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateDirectoryInGuest.GuestPathName">
+            <summary>
+            Source path on the guest operating system.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateSnapshot">
+            <summary>
+            Create a snapshot.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateSnapshot.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateSnapshot.CreateSnapshotTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateSnapshot.SnapshotName">
+            <summary>
+            Name of the snapshot to create.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateSnapshot.SnapshotDescription">
+            <summary>
+            Description of the snapshot to create.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateTempFileInGuest">
+            <summary>
+            Create a temporary file in the guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateTempFileInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateTempFileInGuest.CreateTempFileTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineCreateTempFileInGuest.GuestPathName">
+            <summary>
+            Temporary file path on the guest operating system.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteDirectoryFromGuest">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteDirectoryFromGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteDirectoryFromGuest.DeleteDirectoryTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteDirectoryFromGuest.GuestPathName">
+            <summary>
+            Path on the guest operating system to delete.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteFileFromGuest">
+            <summary>
+            Virtual Machine power on.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteFileFromGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteFileFromGuest.DeleteFileTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineDeleteFileFromGuest.GuestPathName">
+            <summary>
+            Path to the file to delete on the guest operating system.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineFileExistsInGuest">
+            <summary>
+            Check whether a file exists in a guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineFileExistsInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineFileExistsInGuest.FileExistsTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineFileExistsInGuest.GuestPathName">
+            <summary>
+            File path on the guest operating system.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineFileExistsInGuest.FileExists">
+            <summary>
+            True if file exists.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest">
+            <summary>
+            Get file information from a guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.GetFileInfoTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.GuestPathName">
+            <summary>
+            File path on the guest operating system.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.FileSize">
+            <summary>
+            File size.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.IsDirectory">
+            <summary>
+            True if the path belongs to a directory.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.IsSymLink">
+            <summary>
+            True if the path belongs to a symbolic link.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineGetFileInfoInGuest.LastModified">
+            <summary>
+            Date/time when the file was last modified.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRemoveSnapshot">
+            <summary>
+            Remove a snapshot.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRemoveSnapshot.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRemoveSnapshot.RemoveSnapshotTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRemoveSnapshot.SnapshotName">
+            <summary>
+            Name of the snapshot to remove.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOff">
+            <summary>
+            Power off a virtual machine.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOff.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachinePowerOff.PowerOffTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRevertToSnapshot">
+            <summary>
+            RevertTo a snapshot.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRevertToSnapshot.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRevertToSnapshot.RevertToSnapshotTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRevertToSnapshot.SnapshotName">
+            <summary>
+            Name of the snapshot to revertTo.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest">
+            <summary>
+            Execute a program in the guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.RunProgramTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.GuestProgramName">
+            <summary>
+            Program name on the guest operating system to run.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.CommandLineArgs">
+            <summary>
+            Command-line arguments.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessId">
+            <summary>
+            Process ID.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessName">
+            <summary>
+            Process name.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessOwner">
+            <summary>
+            Process owner.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessStartDateTime">
+            <summary>
+            Process start date/time.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessCommand">
+            <summary>
+            Process command line.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.IsProcessBeingDebugged">
+            <summary>
+            True if process is being debugged.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineRunProgramInGuest.ProcessExitCode">
+            <summary>
+            Process exit code for finished processes.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.MSBuildTasks.VirtualMachineShutdownGuest">
+            <summary>
+            Shutdown guest operating system.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.MSBuildTasks.VirtualMachineShutdownGuest.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Vestris.VMWareLib.MSBuildTasks.VirtualMachineShutdownGuest.ShutdownTimeout">
+            <summary>
+            Timeout in seconds.
+            </summary>
+        </member>
+    </members>
+</doc>

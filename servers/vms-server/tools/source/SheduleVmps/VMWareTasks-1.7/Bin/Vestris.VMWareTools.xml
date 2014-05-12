@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vestris.VMWareTools</name>
+    </assembly>
+    <members>
+        <member name="T:Vestris.VMWareLib.Tools.GuestOS">
+            <summary>
+            Generic remote operating system wrapper.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.GuestOS._vm">
+            <summary>
+            Virtual Machine instance.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.#ctor(Vestris.VMWareLib.VMWareVirtualMachine)">
+            <summary>
+            New instance of a guest operating system wrapper.
+            </summary>
+            <param name="vm">Powered virtual machine.</param>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.ReadFile(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents as a string.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.ReadFile(System.String,System.Text.Encoding)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <param name="encoding">Encoding applied to the file contents.</param>
+            <returns>File contents as a string.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.ReadFileBytes(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents as bytes.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.ReadFileLines(System.String)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <returns>File contents, line-by-line.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.ReadFileLines(System.String,System.Text.Encoding)">
+            <summary>
+            Read a file in the guest operating system.
+            </summary>
+            <param name="guestFilename">File in the guest operating system.</param>
+            <param name="encoding">Encoding applied to the file contents.</param>
+            <returns>File contents, line-by-line.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.Dispose">
+            <summary>
+            Release any references to the virtual machine.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.GuestOS.Finalize">
+            <summary>
+            Dispose the object, release any references to the virtual machine.
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.Tools.GuestOS.VirtualMachine">
+            <summary>
+            Virtual Machine
+            </summary>
+        </member>
+        <member name="P:Vestris.VMWareLib.Tools.GuestOS.IpAddress">
+            <summary>
+            Remote IP address.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo">
+            <summary>
+            Contains constructor information for a mapped network drive.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.RemotePath">
+            <summary>
+            Remote network path.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.LocalPath">
+            <summary>
+            Local network path.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.Username">
+            <summary>
+            Optional network username.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.Password">
+            <summary>
+            Optional network password.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.Auto">
+            <summary>
+            Automatically map network drive.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo.#ctor(System.String)">
+            <summary>
+            Default constructor for a remote path.
+            </summary>
+            <param name="remotePath">Remote path.</param>
+        </member>
+        <member name="T:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive">
+            <summary>
+            A mapped network drive on a Windows operating system.
+            This class simplifies remote file system access by connecting this computer to a shared resource on the 
+            guest operating system. It performs a function equivalent to the "net use \\&lt;guest ip&gt;\drive$" or 
+            \\&lt;guest ip&gt;\share" command.
+            </summary>
+            <remarks>
+            <para>
+            Mapping remote shares on the guest operating system and using standard file copy is significantly faster
+            than using the VixCOM file copy functions. This is discussed in http://communities.vmware.com/thread/184489.
+            </para>
+            <para>
+            A common source of network mapping failure is a wrong Local Security Policy setting for "Network Access: Sharing 
+            and Security Model for local accounts" on the target guest operating system. Set it to "classic".
+            </para>
+            </remarks>
+            <example>
+            <para>
+            The following example maps the remote guest operating system's C drive as a regular Windows network share
+            and copies a local file without using VixCOM.
+            <code language="cs" source="..\Source\VMWareToolsSamples\WindowsMappedNetworkDriveSamples.cs" region="Example: Copying Files to/from the Guest Operating System Without VixCOM" />
+            </para>
+            </example>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.#ctor(Vestris.VMWareLib.VMWareVirtualMachine,Vestris.VMWareLib.Tools.Windows.MappedNetworkDriveInfo)">
+            <summary>
+            Creates an instance of a mapped network drive.
+            </summary>
+            <param name="vm">Virtual machine.</param>
+            <param name="info">Mapped network drive info.</param>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.MapNetworkDrive">
+            <summary>
+            Map the network resource.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.UnMapNetworkDrive">
+            <summary>
+            Unmap a previously mapped network drive.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.Dispose">
+            <summary>
+            Dispose the object, unmap a previously mapped network drive.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.Finalize">
+            <summary>
+            Dispose the object, unmap a previously mapped network drive.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.GuestPathToNetworkPath(System.String)">
+            <summary>
+            Convert a path on the guest operating system to a network IP-based path.
+            </summary>
+            <param name="path">Guest operating system path.</param>
+            <returns>A network path.</returns>
+            <example>
+            The following call returns "\\192.168.1.2\c$\temp" on a virtual machine with IP 192.168.1.2.
+            <code>GuestPathToNetworkPath("C:\temp")</code> 
+            </example>
+        </member>
+        <member name="P:Vestris.VMWareLib.Tools.Windows.MappedNetworkDrive.NetworkPath">
+            <summary>
+            Mapped network path.
+            </summary>
+        </member>
+        <member name="T:Vestris.VMWareLib.Tools.Windows.Shell">
+            <summary>
+            A shell wrapper capable of executing remote commands on Microsoft Windows.
+            </summary>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.Shell.#ctor(Vestris.VMWareLib.VMWareVirtualMachine)">
+            <summary>
+            New instance of a shell wrapper object.
+            </summary>
+            <param name="vm">Powered virtual machine.</param>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.Shell.RunCommandInGuest(System.String)">
+            <summary>
+            Use RunProgramInGuest to execute cmd.exe /C "guestCommandLine" > file and parse the result.
+            </summary>
+            <param name="guestCommandLine">Guest command line, argument passed to cmd.exe.</param>
+            <returns>Standard output.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.Shell.RunCommandInGuest(System.String,System.Int32)">
+            <summary>
+            Use RunProgramInGuest to execute cmd.exe /C "guestCommandLine" > file and parse the result.
+            </summary>
+            <param name="guestCommandLine">Guest command line, argument passed to cmd.exe.</param>
+            <param name="timeoutInSeconds">The timeout in seconds.</param>
+            <returns>Standard output.</returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.Shell.RunCommandInGuest(System.String,System.Int32,System.Int32)">
+            <summary>
+            Use RunProgramInGuest to execute cmd.exe /C "guestCommandLine" > file and parse the result.
+            </summary>
+            <param name="guestCommandLine">The guest command line.</param>
+            <param name="options">The options.</param>
+            <param name="timeoutInSeconds">The timeout in seconds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vestris.VMWareLib.Tools.Windows.Shell.GetEnvironmentVariables">
+            <summary>
+            Returns environment variables parsed from the output of a set command.
+            </summary>
+            <returns>Environment variables.</returns>
+            <example>
+            <para>
+            The following example retrieves the ProgramFiles environment variable from the guest operating system.
+            <code language="cs" source="..\Source\VMWareToolsSamples\WindowsShellSamples.cs" region="Example: Enumerating Environment Variables on the GuestOS without VixCOM" />
+            </para>
+            </example>
+        </member>
+        <member name="T:Vestris.VMWareLib.Tools.Windows.Shell.ShellOutput">
+            <summary>
+            Shell output.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.Shell.ShellOutput.StdOut">
+            <summary>
+            Standard output.
+            </summary>
+        </member>
+        <member name="F:Vestris.VMWareLib.Tools.Windows.Shell.ShellOutput.StdErr">
+            <summary>
+            Standard error.
+            </summary>
+        </member>
+    </members>
+</doc>

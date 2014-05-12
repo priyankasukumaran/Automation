@@ -1,0 +1,149 @@
+<h3 id="welcome" align="right">
+</h3>
+<table border="0" width="980px">
+  <tr>
+    <td style="height:30px;color:Black">
+      <h3>
+        Manage Jobs
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a id="add" style="font-size:medium"><b>Schedule new Job</b></a>
+      <a href="/index.html" id="sign" style="font-size:medium"><b>You are not authorized to Add details.Click here to sign in</b></a>
+      <div id="errLabel" class="errText">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="inputForm" style="background:#F2F9FA">
+        <table border="0" cellspacing="2" cellpadding="2" id="vmpstbl">
+          <tr>
+            <td colspan="3" height="40px" style="font-size:medium;color:black">
+              <b>
+                Schedule a Job
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Job Name:
+            </td>
+            <td colspan="2">
+              <input type="text" id="name" />
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Platforms
+            </td>
+            <td colspan="2">
+              <select id="platforms" class="longcombo" multiple>
+              </select>
+            </td>
+          </tr>
+<!--          <tr>
+            <td>
+              Browser
+            </td>
+            <td colspan="2">
+              <select id="browsers" class="longcombo" multiple>
+                <option value="FF">
+                  Firefox 20
+                </option>
+                <option value="GC">
+                  Google Chrome 23
+                </option>
+                <option value="IE">
+                  Internet Explorer 8
+                </option>
+              </select>
+            </td>
+          </tr> -->
+          <tr>
+            <td>
+              Select Tests from the list
+            </td>
+            <td colspan="2">
+              <select id="jobSel" class="longcombo" style="height:130px;" multiple>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Server
+            </td>
+            <td colspan="2">
+              <select id="server" class="longcombo">
+              </select>
+              <input type="hidden" id="id" value="" />
+            </td>
+          </tr>
+          <tr>
+            <td> Schedule:
+            </td>
+            <td colspan="2" style="padding-bottom:10px;">
+              <input type="radio" id="rad" name="case" value="daily" />
+              Daily
+              <input type="radio" id="rad" name="case" value="weekly" />
+              Weekly
+              <input type="radio" id="rad" name="case" value="none" checked/>
+              None
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Git TAG / SHA:
+            </td>
+            <td colspan="2">
+              <input type="text" id="gitTag" value="HEAD" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Report subscribers:
+            </td>
+            <td colspan="2">
+              <select id="subscribers" class="longcombo" multiple>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input class="button" type="button" id="edit" value="Save" />
+            </td>
+            <td>
+              <a id="hide">Cancel</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:30px;color:Black">
+      <h3>
+        List of Jobs
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="vmpsTable"></div>
+    </td>
+  </tr>
+</table>

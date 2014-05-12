@@ -1,0 +1,139 @@
+<h3 id="welcome" align="right">
+</h3>
+<table border="0" width="980px">
+  <tr>
+    <td style="height:30px;color:Black">
+      <h3>
+        Manage Test
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a id="add" style="font-size:medium" ><b>Add New Test</b></a>
+      <a href="/index.html" id="sign" style="font-size:medium"><b>You are not authorized to add the details click here to sign in</b></a>
+      <div id="errLabel" class="errText">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="inputForm" style="background:#F2F9FA">
+        <table border="0" cellspacing="2" cellpadding="2" id="testtbl">
+          <tr>
+            <td colspan="3" height="40px" style="font-size:large;color:black">
+              <b>
+                Add Tests With Parameters
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td width="200px">
+              Name
+            </td>
+            <td colspan="2">
+              <input type="text" id="names" value="" class="longtext" />
+              <input type="hidden" id="id" value="" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Test Scripts
+            </td>
+            <td colspan="2">
+              <select id="testscripts" class="longcombo">
+              </select>
+            </td>
+            <td>
+              <img src="./images/refresh.png" id="getUpdates" value="Refresh" hegiht="20px" width="20px"/>
+            </td>
+            <td>
+              <div id="spinner"><img src="./images/spinner.gif" hegiht="20px" width="20px"/>Loading...</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Launch URL
+            </td>
+            <td colspan="2">
+              <input type="text" id="launch" class="longtext" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Custom Param Values
+            </td>
+            <td>
+              <input type="text" placeholder="custom param key1" id="key1" class="shorttext"/>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param value1" id="value1" class="shorttext"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param key2" id="key2" class="shorttext"/>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param value2" id="value2" class="shorttext"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param key3" id="key3" class="shorttext"/>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param value3" id="value3" class="shorttext"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param key4" id="key4" class="shorttext"/>
+            </td>
+            <td>
+              <input type="text" placeholder="custom param value4" id="value4" class="shorttext"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input class="button" type="button" id="edit" value="Save" />
+            </td>
+            <td>
+              <a id="hide">Cancel</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:10px;">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:30px;color:Black">
+      <h3>
+        List of Tests
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="testsTable">
+    </td>
+  </tr>
+</table>

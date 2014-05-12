@@ -1,0 +1,72 @@
+
+<table border="0" width="980px" style="height:760px; margin-top:20px">
+  <tr>
+    <td style="width:580px;" valign="top">
+      <div class="curved-border" style="text-align:center; width:580px">Recent Tests</div>
+      <div id=recentTest class="curved-border-bottom" style="height:300px; width:580px"></div>
+    </td>
+    <td style="width:15px;"></td>
+    <td style="width:385px;" valign="top">
+      <table id="frSignin" style="background-color:#F5F2F7;height:300px" width="385px" border="0">
+        <tr style="background-color:#D6CADE; height:20px; color:#2b2b2b">
+          <td colspan="2">Sign In</td>
+        </tr>
+        <tr>
+          <td><label for="name" style="margin:0px 0px 0px 60px">Email ID:</label></td>
+          <td><input type="text" id="emails" value="" onkeydown="javascript:handleEnter(event, function() {signin();} );"/></td>
+        </tr>
+        <tr>
+          <td><label for="password" style="margin:0px 0px 0px 50px">Password:</label></td>
+          <td><input type="password" id="passwords" value="" onkeydown="javascript:handleEnter(event, function() {signin();} );"/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="button" value="Login" onclick="signin()">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Forgot your password?</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input style="margin:5px 0px 0px 0px" id="rememberme" value="remember" type="checkbox" checked onkeydown="javascript:handleEnter(event, function() {signin();} );" /> &nbsp;Remember me
+          </td>
+        </tr>
+        <tr style="background-color:#D6CADE; height:20px; color:#2b2b2b">
+          <td colspan="2">Sign Up</td>
+        </tr>
+        <tr>
+          <td><label for="name" style="margin:0px 0px 0px 50px">Full Name:</label></td>
+          <td><input type="text" id="names" value=""/></td>
+        </tr>
+        <tr>
+          <td><label for="name" style="margin:0px 0px 0px 60px">Email ID:</label></td>
+          <td><input type="text" id="email" value=""/></td>
+        </tr>
+        <tr>
+          <td><label for="password" style="margin:0px 0px 0px 50px">Password:</label></td>
+          <td><input type="password" id="password" value=""/></td>
+        </tr>
+        <tr>
+          <td><label for="password">Re-Type Password:</label></td>
+          <td><input type="password" id="password" value="" onkeydown="javascript:handleEnter(event, function() {saveSignup();} );"/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="button" value="Signup" onclick="signin()"></td>
+        </tr>
+        <tr style="background-color:#D6CADE; height:20px; color:#2b2b2b">
+          <td colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:580px;" valign="top">
+      <div class="curved-border" style="text-align:center">Recent Test Scripts</div>
+      <div class="curved-border-bottom" style="height:350px; width:580px" id="recentTestscripts"></div>
+    </td>
+    <td style="width:15px;"></td>
+    <td style="width:385px;" valign="top">
+      <div class="curved-border" style="text-align:center">Recent News</div>
+      <div id=recentNews class="curved-border-bottom" style="height:350px; width:385px"></div>
+    </td>
+  </tr>
+</table>

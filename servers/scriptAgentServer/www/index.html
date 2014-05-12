@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head runat="server">
+    <title>Test Automation Systems</title>
+  <link href="css/newStyle.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="/js/pageCustomizer.js"></script>
+  <script src="/js/jobshelper.js"></script>
+  <script src="/js/testhelper.js"></script>
+  <script src="/js/unitestHelper.js"></script>
+  <script src="/js/serverhelper.js"></script>
+  <script src="/js/signuphelper.js"></script>
+  <script src="/js/summeryhelper.js"></script>
+  <script src="/js/subscriptionHelper.js"></script>
+  <script src="/js/changePasswordHelper.js"></script>
+  <script language="javascript" type="text/javascript">
+  var path = window.location.pathname;
+  var page = path.substring(path.lastIndexOf('/') + 1);
+  $(document).ready(function () {
+    load(page);
+ 
+    var getname = readCookie('user_email');
+    if ($('#frSignin').length && getname !== null) $('#frSignin').hide();
+    var name = getname != null ? getname + "  [<a class='logout' id='signout' onclick=\"signout();\" href='/index.html' alt='logout'>logout</a>][<a class='logout' id='changePassword' href='/changePassword.html'>Change Password</a>]" : "Guest"
+    $("#result").html("Welcome " + name );
+  });
+  </script>
+</head>
+
+<body>
+    <form runat="server">
+    <div id="top">
+      <div class="shell">
+        <h1 id="logo"><img src="images/logo.png" height="60px" width="60px" alt=""/></h1> <h1 id="appName">Test Automation System</h1>
+      </div>
+      <div class="label">
+        <h5 id="result"></h5>
+      </div>
+      <div class="shell">
+      <div id="navigation">
+        <ul>
+            <li id="home"><a  href="/index.html">Home</a></li>
+            <li id="test"><a  href="/tests.html">Tests</a></li>
+            <li id="job"><a  href="/jobs.html">Schedule Jobs</a></li>
+            <li id="unitTest"><a  href="/unittest.html">Unit Test</a></li>
+            <li id="serversPage"><a href="/servers.html">Servers</a></li>
+            <li id="sub" class="last"><a  href="/subscription.html">Subscription</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="shell" style="background-color:#fff">
+
+        <table height="748px" id="maintb">
+          <tr>
+            <td valign="top">
+              {{{content}}}
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="footer">
+        <div class="shell"><span class="center">&copy; 2013 Hewlett-Packard Development Company, L.P. - <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">HP Privacy Statement,&nbsp;</a><a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank"> HP Terms of Use</a>&nbsp;|&nbsp;<a href="/getWebDriver">Download Web Driver Server</a> |</div>
+      </div>
+    </form>
+</body>
+</html>
