@@ -29,7 +29,39 @@ reportPath    -Path of unit test report
 requestedTests-Unit test details
 callback
 */
+var gBrowsers = {IE:"Internet Explorer", GC:"Google Chrome", FF:"Firefox", SAF:"Safari"}
 
+var reportJsonToHTML = function(browser, report, callback) {
+  var html = '<div class="reportInfo">\n<div class="testInfo">';
+  html += '<div><label><b>Test name:</b> </label><span>' + (report.testName || 'Unknown')  + '</span></div>';
+  html += '<div><label><b>Operating System:</b> </label><span>' + (report.OS || 'Unknown')  + '</span></div>';
+  html += '<div><label><b>Browser:</b> </label><span>' + gBrowsers[browser] + ' ' + (report.browserVer || '')  + '</span></div>';
+  html += '<div><label><b>Launch URL:</b> </label><span>' + (report.launchUrl || '/')  + '</span></div>';
+  html += '</div>\n';
+
+  html += '<div class="testLog">';
+  var data = report.result || '';
+  data = data.replace(/\n/g, '<br />');
+  data = data.replace(/Passed/g, '<span class="pass">Passed</span>');
+  data = data.replace(/Failed/g, '<span class="fail">Failed</span>');
+  html += '<h3>Log:</h3><div>' + data + '</div>';
+  var error = report.error || '';
+  if(error.length > 0) {
+    error = error.replace(/\n/g, '<br />');
+    html += '<h3>Errors:</h3><div>' + error + '</div>';
+  }
+  if(report['screenshot'])
+    html += '<h3>Images:</h3><div><a target="_blank" href="' + report.screenshot + '">Error screenshot</a></div>';
+  html += '</div>\n';
+  html += '</div>\n';
+  
+  callback(html);
+}
+
+var checkTestResult = function(report) {
+  return (report.result.length > ("test passed".length)
+      && report.result.indexOf("\nTest Passed\n") >= 0);
+}
 var writeReport = function (reportPath, key, report, stat, statusCollection, callback) {
 
   fs.readFile(reportPath, function(err, data) {
